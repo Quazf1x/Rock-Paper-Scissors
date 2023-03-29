@@ -1,14 +1,14 @@
 :root{
   --firstColor: #CDB4DB;
-  --secondColor: #FFC8DD;
-  --thirdColor: #FFAFCC;
+  --backgroundColor: #FFC8DD;
+  --accentColor: #FFAFCC;
   --fourthColor: #BDE0FE;
   --fifthColor: #A2D2FF;
   --textColor: white;
 }
 
 body{
-  background-color: var(--secondColor);
+  background-color: var(--backgroundColor);
   font-family: 'Oswald', sans-serif;
   position: relative;
   height: 100svh;
@@ -22,7 +22,7 @@ footer a{
   color: white;
   text-decoration: none;
 }
-.game-name,.score{
+.game-name,.score,.results-div{
   text-transform: uppercase;
   color: var(--textColor);
   font-weight: 400;
@@ -50,7 +50,7 @@ footer a{
   width: 80%;
 }
 .option-div{
-  border: 10px solid var(--thirdColor);
+  border: 10px solid var(--accentColor);
   display: flex;
   justify-content: center;
   height: 100%;
@@ -64,4 +64,8 @@ footer a{
 }
 .option-div img:hover{
   transform: scale(1.1);
+}
+.results-div{
+  margin-top: 50px;
+  font-size: 3rem;
 }

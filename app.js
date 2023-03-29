@@ -1,6 +1,7 @@
-/*const rockBtn = document.querySelector('#rock-button');
+const rockBtn = document.querySelector('#rock-button');
 const scissorsBtn = document.querySelector('#scissors-button');
 const paperBtn = document.querySelector('#paper-button');
+const totalScore = document.querySelector('#total-score');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -15,10 +16,13 @@ function getComputerChoice(){
   return Math.floor(Math.random()*maxOptions);
 }
 
+function returnScore(){
+  totalScore.innerHTML=`${playerScore} - ${computerScore}`;
+}
+
 function playRound(playerValue, computerSelection){
   
   let roundOutcome = outcomes[playerValue][computerSelection];
-  console.log('wow');
   if(roundOutcome===1)
   return "It's a Tie!";
 
@@ -31,25 +35,17 @@ function playRound(playerValue, computerSelection){
   return "You Lost!";}
 };
 
-rockBtn.addEventListener('click',);
+rockBtn.addEventListener('click',(e)=>{
+  playRound(0, getComputerChoice());
+  returnScore();
+});
 
-while(true){
+scissorsBtn.addEventListener('click',(e)=>{
+  playRound(1, getComputerChoice());
+  returnScore();
+});
 
-  let playerValue = prompt();
-
-  console.log(playRound(playerValue,getComputerChoice()));
-  console.log(`Player score is: ${playerScore}`);
-  console.log(`Computer score is: ${computerScore}`);
-
-  if(playerScore===5){
-  console.log("You won 5 times!Game over!");
-  break;
-  }
-
-  if(computerScore===5){
-  console.log("The computer won 5 times!Game over!");
-  break;
-  }
-};
-
-*/
+paperBtn.addEventListener('click',(e)=>{
+  playRound(2, getComputerChoice());
+  returnScore();
+});
