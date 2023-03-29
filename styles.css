@@ -1,71 +1,90 @@
-:root{
-  --firstColor: #CDB4DB;
+:root {
   --backgroundColor: #FFC8DD;
   --accentColor: #FFAFCC;
-  --fourthColor: #BDE0FE;
-  --fifthColor: #A2D2FF;
+  --optionalColor: #BDE0FE;
   --textColor: white;
 }
 
-body{
+body {
   background-color: var(--backgroundColor);
   font-family: 'Oswald', sans-serif;
   position: relative;
   height: 100svh;
   overflow: hidden;
 }
-footer{
+
+footer {
   position: absolute;
   bottom: 25px;
 }
-footer a{
+
+footer a {
   color: white;
   text-decoration: none;
 }
-.game-name,.score,.results-div{
+
+.game-name,
+.score,
+.results-div {
   text-transform: uppercase;
   color: var(--textColor);
   font-weight: 400;
   text-align: center;
 }
-.game-name{
+
+.game-name {
   font-size: 3.8rem;
   margin-bottom: 0;
   margin-top: 20px;
 }
-.score{
+
+.score {
   margin: 0;
   font-size: 2rem;
 }
-.section-wrapper{
+
+.section-wrapper {
   display: flex;
   justify-content: center;
   height: 50%;
   margin-top: 20px;
 }
-.options-display{
+
+.options-display {
   display: flex;
   justify-content: space-between;
   height: 100%;
   width: 80%;
 }
-.option-div{
+
+.option-div {
   border: 10px solid var(--accentColor);
   display: flex;
   justify-content: center;
   height: 100%;
   width: 30%;
 }
-.option-div img{
+
+.player-border {
+  border-color: white;
+}
+
+.computer-border {
+  border-color: var(--optionalColor);
+}
+
+.option-div img {
   align-self: center;
   cursor: pointer;
   filter: invert(1);
   transition: all .25s;
 }
-.option-div img:hover{
+
+.option-div img:hover {
   transform: scale(1.1);
 }
-.results-div{
+
+.results-div {
   margin-top: 50px;
   font-size: 3rem;
 }
